@@ -1,7 +1,7 @@
 from math import sqrt
 
-from snakebattleclient.internals.Element import Element
-from snakebattleclient.internals.Point import Point
+from TetrisBattleClient.internals.Element import Element
+from TetrisBattleClient.internals.Point import Point
 from typing import Optional, Tuple, List
 import json
 

@@ -1,8 +1,8 @@
 import logging
 import websocket
 
-from snakebattleclient.internals.Board import Board
-from snakebattleclient.internals.TetrisAction import TetrisAction
+from TetrisBattleClient.internals.Board import Board
+from TetrisBattleClient.internals.TetrisAction import TetrisAction
 
 logger = logging.getLogger(__name__)
 

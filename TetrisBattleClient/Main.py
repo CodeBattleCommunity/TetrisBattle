@@ -1,15 +1,15 @@
-from snakebattleclient.TetrisBattleClient import GameClient
+from TetrisBattleClient.GameClient import GameClient
 import random
 import logging
 
-from snakebattleclient.internals.TetrisAction import TetrisAction
-from snakebattleclient.internals.Board import Board
+from TetrisBattleClient.internals.TetrisAction import TetrisAction
+from TetrisBattleClient.internals.Board import Board
 
 logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s',
                     level=logging.INFO)
 
 
-def turn(gcb: Board):
+def turn(gcb: Board) -> TetrisAction:
     # Код писать сюда!!!
     return random.choice(list(TetrisAction))
 

@@ -4,6 +4,7 @@ import logging
 
 from TetrisBattleClient.internals.TetrisAction import TetrisAction
 from TetrisBattleClient.internals.Board import Board
+from TetrisBattleClient import Element
 
 logging.basicConfig(format='%(asctime)s %(levelname)s:%(message)s',
                     level=logging.INFO)

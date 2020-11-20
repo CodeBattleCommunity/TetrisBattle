@@ -42,8 +42,8 @@ class Board:
         return _points
 
     def get_current_figure_point(self) -> Point:
-        return Point(self._json['currentFigureType']['x'],
-                     self._json['currentFigureType']['y'])
+        return Point(int(self._json['currentFigurePoint']['x']),
+                     int(self._json['currentFigurePoint']['y']))
 
     def get_current_figure_type(self) -> str:
         return self._json['currentFigureType']
@@ -55,12 +55,12 @@ class Board:
         """ Return an Element object at coordinates x,y."""
         return Element(self._layer[self._xy2strpos(point.get_x(), point.get_y())])
 
-    def has_element_at(self, point: Point, element_object) -> bool:
+    def has_element_at(self, point: Point, element_object: Element) -> bool:
         if point.is_out_of_board(self._size):
             return False
         return element_object == self.get_element_at(point)
 
-    def find_element(self, type_: str) -> Optional[Point]:
+    def find_element(self, type_: Element) -> Optional[Point]:
         for i in range(self._size * self._size):
             point = self.get_point_by_shift(i)
             if self.has_element_at(point, type_):
